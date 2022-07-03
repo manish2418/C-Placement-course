@@ -9,8 +9,8 @@ int main()
  int x=42;
  int y=43;
  
- int sum = x*y;
- cout<<sum;
+ int product = x*y;
+ cout<<product;
  
  
 
