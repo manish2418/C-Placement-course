@@ -1,0 +1,104 @@
+//OOPS(PART I)
+#include <iostream>
+using namespace std;
+class Hero{
+    //Properties
+    private :
+    int health;
+    public :
+    char level;
+    
+    
+    Hero(){
+        cout<<" Constructor Called"<<endl;
+    }
+    //Paramerterised Constructor
+    Hero(int health){
+        cout<<this<<endl;
+        this -> health=health;
+    }
+    Hero(int health,char level){
+        this->level=level;
+        this->health=health;
+    }
+    //copy constructor
+    Hero(Hero& temp){
+        this->health=temp.health;
+        this->level=temp.level;
+        
+    }
+    
+    void print(){
+        cout<<this->health<<endl;
+        cout<<this->level<<endl;
+    }
+    int getHealth(){
+        return health;
+    }
+    char getlevel(){
+        return level;
+    }
+    void setHealth(int h){
+        health=h;
+    }
+    void setLevel(char ch){
+        level=ch;
+    }
+    
+};
+int main() {
+  
+  Hero suresh(70,'C');
+  suresh.print();
+  
+  //Copy Constructor
+  Hero R(suresh);
+  R.print();
+
+  
+//   Hero ramesh(10);
+//   cout<<&ramesh<<endl;
+  
+  
+  
+    
+    // cout<<"Hi"<<endl;
+    // Hero ramesh;
+    // cout<<"hello"<<endl;
+    
+    
+    // //Static allocation
+    // Hero a;
+    // a.setHealth(80);
+    // a.setLevel('B');
+    // cout<<a.level;
+    // cout<<a.getHealth();
+    // //Dynamic allocation
+    // Hero *b=new Hero;
+    // b->setLevel('A');
+    // b->setHealth(70);
+    // // cout<<(*b).level;
+    // // cout<<(*b).getHealth;
+    
+    //   cout<<b->level;
+    //  cout<<b->getHealth();
+    
+    
+    
+    
+    
+   
+//   //Creation of Object
+//   Hero h1;
+//   cout<<h1.getHealth();
+//   //Use Setter
+//   h1.setHealth(70);
+// getHealth()
+//   h1.level='A';
+//   //Acessing 
+//     cout<<h1.getHealth()<<endl;
+//     cout<<h1.level<<endl;
+// //   cout<<"size : "<<sizeof(h1)<<endl;
+
+    return 0;
+}
