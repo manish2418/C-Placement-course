@@ -1,17 +1,22 @@
 //OOPS(PART I)
 #include <iostream>
+#include<cstring>
 using namespace std;
 class Hero{
     //Properties
     private :
     int health;
     public :
+    char *name;
     char level;
     
-    
     Hero(){
-        cout<<" Constructor Called"<<endl;
+        cout<<"Simple constructor called"<<endl;
+        name=new char[100];
     }
+    // Hero(){
+    //     cout<<" Constructor Called"<<endl;
+    // }
     //Paramerterised Constructor
     Hero(int health){
         cout<<this<<endl;
@@ -23,14 +28,21 @@ class Hero{
     }
     //copy constructor
     Hero(Hero& temp){
+        char *temp=new char[strlen(temp.name) + 1]
+        strcpy(ch,temp.name);
+        this->name=ch;
+        
         this->health=temp.health;
         this->level=temp.level;
         
     }
     
     void print(){
+        cout<<endl;
+        cout<<"Name:"<<this->name<<" , ";
         cout<<this->health<<endl;
         cout<<this->level<<endl;
+        cout<<endl;
     }
     int getHealth(){
         return health;
@@ -45,15 +57,54 @@ class Hero{
         level=ch;
     }
     
+    void setName(char name[]){
+        strcpy(this->name,name);
+    }
+    //Destructor
+    ~Hero(){
+        cout<<"Destructor bhai called"<<endl;
+    }
+    
 };
 int main() {
+    
+    //Static 
+    Hero a;
+    
+    //Dynamic
+    Hero *b=new Hero();
+    //Manually destructor call
+    delet b;
+    
+    
+    
+    
+    
+    
+//   Hero hero1;
+//   hero1.setHealth(12);
+//   hero1.setLevel('D');
+//   char name[7]="Google";
+//   hero1.setName(name);
+   
+//   hero1.print();
+   
+//   //use deafault copy constructor
+   
+//   Hero hero2 (hero1);
+//   hero2.print();
+//   //Hero hero2=hero 1;
+//     hero1.name[0]='G';
+//     hero1.print();
+//     hero2.print();
+    
   
-  Hero suresh(70,'C');
-  suresh.print();
+//   Hero suresh(70,'C');
+//   suresh.print();
   
   //Copy Constructor
-  Hero R(suresh);
-  R.print();
+//   Hero R(suresh);
+//   R.print();
 
   
 //   Hero ramesh(10);
