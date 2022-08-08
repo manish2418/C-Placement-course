@@ -1,0 +1,44 @@
+//Print Name and Age(Coding Ninja Problem)
+#include<iostream>
+
+using namespace std;
+
+class Person {
+    private:
+    string name;
+    int age;
+    
+    public:
+    string getname(){
+      return name;
+    }
+    void setname(string b){
+        this->name=b;
+    }
+    int  getage(){
+       return age;
+    }
+    
+    void setage(int a){
+        this->age=a;
+    }
+    // Complete the class
+};
+
+
+int main() {
+    string m;
+    int k;
+    cin>>m;
+    cin>>k; 
+    if (m.empty()==true && k==0 ){
+        return -1;
+    }else{
+    Person obj;
+      obj.setname(m);
+      obj.setage(k);
+      cout<<"The name of the person is"<<" "<<obj.getname()<<" "<<"and the age is"<<" "<<obj.getage()<<"."<<endl;
+      
+    }
+    return 0;
+}
