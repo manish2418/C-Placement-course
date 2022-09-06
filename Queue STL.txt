@@ -1,0 +1,24 @@
+//Queue STL
+#include <bits/stdc++.h>
+using namespace std;
+int main() { 
+    
+//create a queue
+queue<int> q;
+q.push(11);
+cout<<q.front();
+q.push(15);
+q.push(13);
+q.pop();
+// q.pop();
+// q.pop();
+cout<<q.size();
+if(q.empty()){
+    cout<<"yes";
+}else{
+    cout<<"no";
+}
+
+
+    return 0;
+}
