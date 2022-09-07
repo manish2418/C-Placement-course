@@ -1,0 +1,22 @@
+//STL Doubly Ended Queue
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+deque<int>d;
+d.push_front(12);
+d.push_back(14);
+cout<<d.front();
+cout<<d.back();
+d.pop_front();
+cout<<d.front(); 
+cout<<d.back();
+d.pop_back();
+if(d.empty()){
+cout<<"empty";
+    
+}else{
+    cout<<"not empty";
+}
+
+    return 0;
+}
