@@ -1,0 +1,15 @@
+//Choclate Distribution Circular problem
+#include <iostream>
+using namespace std;
+int main() {
+    int a,b,c;
+    cin>>a>>b>>c;
+    int k=(b+c-1)%a;
+    if(k==0){
+        cout<<a<<endl;
+    }else{
+        cout<<k;
+    }
+
+    return 0;
+}
