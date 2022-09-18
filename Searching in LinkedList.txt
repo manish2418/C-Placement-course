@@ -1,0 +1,21 @@
+// Linked List Searching
+#include <iostream>
+using namesapce std;
+void find(Node *start,int data){
+    Node* temp=head;
+    while(temp!NULL){
+        if(temp->data==data){
+            cout<<data<<"is found";
+            return ;
+        }
+        temp=temp->next;
+    }else{
+        cout<<data<<"Not Found";
+    }
+}
+int main() {
+    
+    
+
+    return 0;
+}
