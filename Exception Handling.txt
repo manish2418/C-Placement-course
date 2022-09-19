@@ -1,0 +1,22 @@
+// Exception Handling
+#include <iostream>
+using namespace std;
+int main() {
+   
+   int first,second,result;
+   cout<<"Enter Two Numbers : ";
+   cin>>first>>second;
+   try{
+       if(second!=0){
+          result=first/second;  
+          cout<<"Result : "<<result;
+       }
+       else throw(second);
+   }
+  
+   catch(int number){
+       cout<<"Divide by zero is not allowed";
+   }
+
+    return 0;
+}
