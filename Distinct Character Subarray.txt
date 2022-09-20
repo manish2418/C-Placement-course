@@ -1,0 +1,23 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t,i,j,k,n;
+	cin>>t;
+	cin.ignore();
+	while(t--)
+	{
+	    int x;
+	    string s;
+	    getline(cin,s);
+	    set<char>st;
+	    for(i=0;i<s.size();i++)
+	    {
+	        st.insert(s[i]);
+	    }
+	    cout<<st.size()<<endl;
+	}
+	return 0;
+}
