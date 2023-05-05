@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+class A{
+    public:
+    int x;
+    
+    A(int a){
+        x=a;
+    }
+    A(A &B){
+        x=B.x;
+    }
+    
+};
+int main() {
+  
+  A a1(20);//Calling Parameterized
+  A a2(a1);//Copy Constructuor
+  cout<<a2.x;
+  
+
+    return 0;
+}
